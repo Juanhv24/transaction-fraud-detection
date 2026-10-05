@@ -1,0 +1,17 @@
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Datos: los CSV del IEEE-CIS y la base SQLite se generan en local (ver README)
+data/*
+!data/.gitkeep
+
+# Modelos entrenados: se regeneran con el notebook 03
+outputs/modelos/*
+!outputs/modelos/.gitkeep
+
+# Versión anterior del proyecto, conservada solo en local
+_version_original/

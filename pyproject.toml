@@ -1,0 +1,37 @@
+[project]
+name = "transaction-fraud-detection"
+version = "1.0.0"
+description = "Detección de fraude transaccional que integra SQL (SQLite), Python y modelado sobre el dataset IEEE-CIS."
+readme = "README.md"
+authors = [{ name = "Juan Daniel Hernández Vargas" }]
+requires-python = ">=3.13"
+dependencies = [
+    "lightgbm>=4.6",
+    "matplotlib>=3.10",
+    "numpy>=2.2",
+    "optuna>=4.4",
+    "pandas>=2.3",
+    "scikit-learn>=1.7",
+    "seaborn>=0.13",
+    "shap>=0.48",
+    "torch>=2.7",
+    "xgboost>=3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+    "pytest>=8.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.17,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "fraude"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
