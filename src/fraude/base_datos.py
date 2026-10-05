@@ -18,8 +18,8 @@ def conectar(ruta: Path = config.BASE) -> sqlite3.Connection:
     ruta = Path(ruta)
     if not ruta.exists():
         raise FileNotFoundError(
-            f"No se encontró la base {ruta}. Ejecute el notebook 00 (o fraude.base_datos.crear_base()) "
-            f"con los CSV de {config.URL_DATOS} en la carpeta data/."
+            f"No se encontró la base {ruta}. La base se crea con el notebook 00 (o con "
+            f"fraude.base_datos.crear_base()) a partir de los CSV de {config.URL_DATOS} ubicados en data/."
         )
     return sqlite3.connect(ruta)
 
